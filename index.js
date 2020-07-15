@@ -1,7 +1,7 @@
-let messageDiv = document.getElementById('quote')
+let quotesDiv = document.getElementById('quote')
 
-fetch('https://api.kanye.rest')
+fetch('https://api.chucknorris.io/jokes/random')
     .then(res => res.json())
     .then(quote => {
-        messageDiv.innerHTML += '<p> ${quote.quote} </p>'
+        quotesDiv.innerHTML += '<p>' + quote.value + '</p>'
     })
