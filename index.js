@@ -1,7 +1,7 @@
-let quotesDiv = document.getElementById('quote')
+let messageDiv = document.getElementById('message')
 
 fetch('https://api.chucknorris.io/jokes/random')
     .then(res => res.json())
-    .then(quote => {
-        quotesDiv.innerHTML += '<p> ${quote.value) asdf </p>'
+    .then(message => {
+        messageDiv.innerHTML += '<p> ${message.value} </p>'
     })
